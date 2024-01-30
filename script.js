@@ -35,9 +35,9 @@ length.addEventListener("input", function () {
 
 // copy text
 displayPassword.addEventListener("click", () => {
-  if (displayPassword.value !== "") {
+  if (displayPassword.innerHTML !== "") {
     navigator.clipboard
-      .writeText(displayPassword.value)
+      .writeText(displayPassword.innerHTML)
       .then(() => {
         displayPassword.classList.add("copied");
         displayPassword.innerHTML = "Copied...";
